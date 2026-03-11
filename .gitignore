@@ -1,0 +1,48 @@
+# Unity 特定文件
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# 项目设置
+*.asset
+*.unity
+*.meta
+*.prefab
+*.mat
+*.fbx
+*.blend
+*.obj
+*.dds
+*.jpg
+*.png
+*.psd
+*.tga
+*.bmp
+*.wav
+*.mp3
+*.ogg
+*.fbx
+*.3ds
+*.max
+*.mb
+*.ma
+
+# OS generated
+.DS_Store*
+._*
+Thumbs.db
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Visual Studio 忽略
+*.sln
+*.csproj
+*.user
+*.userprefs
+*.suo
