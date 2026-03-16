@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float rotationSpeed = 10f;
+    [SerializeField] private GameInput gameInput;
     private bool isWalking = false;
     // Start is called before the first frame update
     void Start()
@@ -16,14 +17,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0, vertical);
-
+        Vector3 direction = gameInput.GetMovementDirectionNormalized();
         if (direction != Vector3.zero) isWalking = true;
         else isWalking = false;
-
-        direction = direction.normalized;// 单位化方向
 
         transform.position += direction * Time.deltaTime * moveSpeed;
 
