@@ -7,15 +7,29 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float rotationSpeed = 10f;
     [SerializeField] private GameInput gameInput;
+    [SerializeField] private LayerMask counterLayerMask;
     private bool isWalking = false;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameInput.OnInteraction += GameInput_OnInteraction;
+    }
+    private void Update()
+    {
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
+    {
+        HandleMovement();
+        
+    }
+    public bool IsWalking
+    {
+        get { return isWalking; }
+    }
+    private void HandleMovement()
     {
         Vector3 direction = gameInput.GetMovementDirectionNormalized();
         if (direction != Vector3.zero) isWalking = true;
@@ -28,8 +42,18 @@ public class Player : MonoBehaviour
             transform.forward = Vector3.Slerp(transform.forward, direction, Time.deltaTime * rotationSpeed);//Spherical Interpolation球面线性插值
         }
     }
-    public bool IsWalking
+    private void GameInput_OnInteraction(object sender, System.EventArgs e)
     {
-        get { return isWalking; }
+        HandleInteraction();
+    }
+    private void HandleInteraction()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitinfo, 2f, counterLayerMask)) // 判断射线前方是否有物体且是counter Layer Mask图层的
+        {
+            if (hitinfo.transform.TryGetComponent<ClearCounter>(out ClearCounter counter)) // 尝试获取物体上的组件，如果有就创建该组件的实例
+            {
+                counter.Interact();
+            }
+        }
     }
 }
