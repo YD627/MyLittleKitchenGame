@@ -8,16 +8,18 @@ public class Player : MonoBehaviour
     [SerializeField] private float rotationSpeed = 10f;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private LayerMask counterLayerMask;
+
     private bool isWalking = false;
-    
+    private ClearCounter selectedCounter;
+
     // Start is called before the first frame update
     void Start()
     {
         gameInput.OnInteraction += GameInput_OnInteraction;
     }
-    private void Update()
+    void Update()
     {
-
+        HandleInteraction();
     }
 
     private void FixedUpdate()
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour
     }
     private void GameInput_OnInteraction(object sender, System.EventArgs e)
     {
-        HandleInteraction();
+        selectedCounter?.Interact();
     }
     private void HandleInteraction()
     {
@@ -52,8 +54,25 @@ public class Player : MonoBehaviour
         {
             if (hitinfo.transform.TryGetComponent<ClearCounter>(out ClearCounter counter)) // 尝试获取物体上的组件，如果有就创建该组件的实例
             {
-                counter.Interact();
+                SetSelectedCounter(counter);
             }
+            else
+            {
+                SetSelectedCounter(null);
+            }
+        }
+        else
+        {
+            SetSelectedCounter(null);
+        }
+    }
+    public void SetSelectedCounter(ClearCounter counter)
+    {
+        if(counter != selectedCounter)
+        {
+            selectedCounter?.CancelSelect();
+            counter?.SelectCounter();
+            this.selectedCounter = counter;
         }
     }
 }
