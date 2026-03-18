@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : KitchenObjectHolder
 {
+    public static Player Instance {  get; private set; }
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float rotationSpeed = 10f;
     [SerializeField] private GameInput gameInput;
@@ -12,6 +13,10 @@ public class Player : MonoBehaviour
     private bool isWalking = false;
     private ClearCounter selectedCounter;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
