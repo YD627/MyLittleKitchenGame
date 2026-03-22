@@ -11,7 +11,7 @@ public class Player : KitchenObjectHolder
     [SerializeField] private LayerMask counterLayerMask;
 
     private bool isWalking = false;
-    private ClearCounter selectedCounter;
+    private BaseCounter selectedCounter;
 
     private void Awake()
     {
@@ -51,13 +51,13 @@ public class Player : KitchenObjectHolder
     }
     private void GameInput_OnInteraction(object sender, System.EventArgs e)
     {
-        selectedCounter?.Interact();
+        selectedCounter?.Interact(this);
     }
     private void HandleInteraction()
     {
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitinfo, 2f, counterLayerMask)) // 判断射线前方是否有物体且是counter Layer Mask图层的
         {
-            if (hitinfo.transform.TryGetComponent<ClearCounter>(out ClearCounter counter)) // 尝试获取物体上的组件，如果有就创建该组件的实例
+            if (hitinfo.transform.TryGetComponent<BaseCounter>(out BaseCounter counter)) // 尝试获取物体上的组件，如果有就创建该组件的实例
             {
                 SetSelectedCounter(counter);
             }
@@ -71,7 +71,7 @@ public class Player : KitchenObjectHolder
             SetSelectedCounter(null);
         }
     }
-    public void SetSelectedCounter(ClearCounter counter)
+    public void SetSelectedCounter(BaseCounter counter)
     {
         if(counter != selectedCounter)
         {

@@ -12,6 +12,10 @@ public class KitchenObjectHolder : MonoBehaviour
     {
         return kitchenObject;
     }
+    public bool IsHaveKitchenObject()
+    {
+        return kitchenObject != null;
+    }
     public void SetKitchenObject(KitchenObject kitchenObject)
     {
         this.kitchenObject = kitchenObject;
@@ -42,6 +46,7 @@ public class KitchenObjectHolder : MonoBehaviour
         kitchenObject.transform.localPosition = Vector3.zero;
         this.kitchenObject = kitchenObject;
     }
+    
     public void ClearKitchenObject()
     {
         this.kitchenObject = null;
