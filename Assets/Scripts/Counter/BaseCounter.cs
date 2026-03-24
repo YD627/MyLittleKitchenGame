@@ -9,6 +9,10 @@ public class BaseCounter : KitchenObjectHolder
     {
         Debug.LogWarning("交互功能没有重写");
     }
+    public virtual void InteractOperate(Player player)
+    {
+
+    }
     public void SelectCounter()
     {
         selectedCounter.SetActive(true);

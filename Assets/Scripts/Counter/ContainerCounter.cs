@@ -21,9 +21,4 @@ public class ContainerCounter : BaseCounter
             return;
         }
     }
-    public void CreateKitchenObject(GameObject kitchenObjectPrefab)
-    {
-        KitchenObject kitchenObject = GameObject.Instantiate(kitchenObjectPrefab, GetHoldPoint()).GetComponent<KitchenObject>();
-        SetKitchenObject(kitchenObject);
-    }
 }
