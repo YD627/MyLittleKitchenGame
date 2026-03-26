@@ -7,6 +7,7 @@ public class CuttingCounter : BaseCounter
 {
     [SerializeField] private CuttingRecipeListSO cuttingRecipeList;
     [SerializeField] private ProgressBarUI progressBarUI;
+    [SerializeField] private CuttingCounterVisual cuttingCounterVisual;
     private int cuttingCount = 0;
     public override void Interact(Player player)
     {
@@ -39,7 +40,7 @@ public class CuttingCounter : BaseCounter
             // 获取当前食材是否能被切
             if (cuttingRecipeList.TryGetCuttingRecipe(GetKitchenObject().GetKitchenObjectSO(), out CuttingRecipe cuttingRecipe)) 
             {
-                cuttingCount++;
+                Cut();
 
                 progressBarUI.UpdateProgress((float)cuttingCount/cuttingRecipe.CuttingCountMax);
 
@@ -52,5 +53,10 @@ public class CuttingCounter : BaseCounter
             }
             
         }
+    }
+    private void Cut()
+    {
+        cuttingCount++;
+        cuttingCounterVisual.PlayCut();
     }
 }
