@@ -6,6 +6,9 @@ using UnityEngine.UIElements;
 public class StoveCounter : BaseCounter
 {
     [SerializeField] private FryingRecipeListSO fryingRecipeList;
+    [SerializeField] private FryingRecipeListSO burningRecipeList;
+    [SerializeField] private StoveCounterVisual stoveCounterVisual;
+    [SerializeField] private ProgressBarUI progressBarUI;
 
     public enum StoveState
     {
@@ -22,11 +25,21 @@ public class StoveCounter : BaseCounter
         if (player.GetKitchenObject())
         {
             // 手上有食材
-            if (IsHaveKitchenObject() == false && fryingRecipeList.TryGetFryingRecipe(player.GetKitchenObject().GetKitchenObjectSO(), out FryingRecipe newfryingRecipe)) 
+            if (IsHaveKitchenObject() == false) 
             {
-                // 当前柜台上没有食材
-                TransferKitchenObject(player, this);
-                StartFrying(newfryingRecipe);
+                if (fryingRecipeList.TryGetFryingRecipe(player.GetKitchenObject().GetKitchenObjectSO(), out FryingRecipe newfryingRecipe))
+                {
+                    // 当前柜台上没有食材且传递的食材可以煎
+                    TransferKitchenObject(player, this);
+                    StartFrying(newfryingRecipe);
+                }
+                else if(burningRecipeList.TryGetFryingRecipe(player.GetKitchenObject().GetKitchenObjectSO(), out FryingRecipe newburningRecipe)){
+                    // 当前柜台上没有食材且传递的食材不可以煎
+                    TransferKitchenObject(player, this);
+                    StartFrying(newburningRecipe);
+                }
+                else { }
+
             }
         }
         else
@@ -35,6 +48,7 @@ public class StoveCounter : BaseCounter
             if (IsHaveKitchenObject())
             {
                 // 柜台上有食材
+                TurnToIdle();
                 TransferKitchenObject(this, player);
             }
         }
@@ -47,22 +61,24 @@ public class StoveCounter : BaseCounter
                 break;
             case StoveState.Frying:
                 fryingTimer += Time.deltaTime;
+                progressBarUI.UpdateProgress(fryingTimer / fryingRecipe.fryingTime);
                 if(fryingTimer >= fryingRecipe.fryingTime)
                 {
                     DestroyKitchenObject();
                     CreateKitchenObject(fryingRecipe.output.prefab);
 
-                    fryingRecipeList.TryGetFryingRecipe(fryingRecipe.output,out FryingRecipe newFryingRecipe);
+                    burningRecipeList.TryGetFryingRecipe(fryingRecipe.output,out FryingRecipe newFryingRecipe);
                     StartBurning(newFryingRecipe);
                 }
                 break;
             case StoveState.Burning:
                 fryingTimer += Time.deltaTime;
-                if(fryingTimer >= fryingRecipe.fryingTime)
+                progressBarUI.UpdateProgress(fryingTimer / fryingRecipe.fryingTime);
+                if (fryingTimer >= fryingRecipe.fryingTime)
                 {
                     DestroyKitchenObject();
                     CreateKitchenObject(fryingRecipe.output.prefab);
-                    state = StoveState.Idle;
+                    TurnToIdle();
                 }
                 break;
             default:
@@ -74,17 +90,25 @@ public class StoveCounter : BaseCounter
         fryingTimer = 0f;
         this.fryingRecipe = fryingRecipe;
         state = StoveState.Frying;
+        stoveCounterVisual.ShowStoveEffect();
     }
     public void StartBurning(FryingRecipe fryingRecipe)
     {
         if(fryingRecipe == null)
         {
             Debug.LogWarning("无法获取Burning的食谱，无法进行Burning。");
-            state = StoveState.Idle;
+            TurnToIdle();
             return;
         }
+        stoveCounterVisual.ShowStoveEffect();
         fryingTimer = 0f;
         this.fryingRecipe = fryingRecipe;
         state = StoveState.Burning;
+    }
+    private void TurnToIdle()
+    {
+        state = StoveState.Idle;
+        stoveCounterVisual.HideStoveEffect();
+        progressBarUI.Hide();
     }
 }
