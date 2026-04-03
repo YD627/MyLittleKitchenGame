@@ -12,6 +12,10 @@ public class KitchenObjectHolder : MonoBehaviour
     {
         return kitchenObject;
     }
+    public KitchenObjectSO GetKitchenObjectSO()
+    {
+        return kitchenObject.GetKitchenObjectSO();
+    }
     public bool IsHaveKitchenObject()
     {
         return kitchenObject != null;

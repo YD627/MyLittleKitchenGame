@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlatesCounter : BaseCounter
 {
@@ -24,7 +25,14 @@ public class PlatesCounter : BaseCounter
     }
     public override void Interact(Player player)
     {
-        base.Interact(player);
+        if (player.GetKitchenObject() == false)
+        {
+            if(plateList.Count > 0)
+            {
+                player.AddKitchenObject(plateList[plateList.Count - 1]);
+                plateList.RemoveAt(plateList.Count - 1);
+            }
+        }
     }
     private void GeneratePlates()
     {
