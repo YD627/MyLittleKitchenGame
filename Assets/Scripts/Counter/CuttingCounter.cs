@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class CuttingCounter : BaseCounter
     [SerializeField] private ProgressBarUI progressBarUI;
     [SerializeField] private CuttingCounterVisual cuttingCounterVisual;
     private int cuttingCount = 0;
+    public static event EventHandler OnCut;
     public override void Interact(Player player)
     {
         if (player.GetKitchenObject())
@@ -38,25 +40,26 @@ public class CuttingCounter : BaseCounter
         if (IsHaveKitchenObject())
         {
             // 获取当前食材是否能被切
-            if (cuttingRecipeList.TryGetCuttingRecipe(GetKitchenObject().GetKitchenObjectSO(), out CuttingRecipe cuttingRecipe)) 
+            if (cuttingRecipeList.TryGetCuttingRecipe(GetKitchenObject().GetKitchenObjectSO(), out CuttingRecipe cuttingRecipe))
             {
                 Cut();
 
-                progressBarUI.UpdateProgress((float)cuttingCount/cuttingRecipe.CuttingCountMax);
+                progressBarUI.UpdateProgress((float)cuttingCount / cuttingRecipe.CuttingCountMax);
 
-                if(cuttingCount == cuttingRecipe.CuttingCountMax)
+                if (cuttingCount == cuttingRecipe.CuttingCountMax)
                 {
                     DestroyKitchenObject();
                     CreateKitchenObject(cuttingRecipe.output.prefab);
                 }
-                
+
             }
-            
+
         }
     }
     private void Cut()
     {
         cuttingCount++;
         cuttingCounterVisual.PlayCut();
+        OnCut?.Invoke(this, EventArgs.Empty);
     }
 }
