@@ -16,6 +16,7 @@ public static class Loader
 
     public static void Load(Scene scene)
     {
+        Time.timeScale = 1;
         targetScene = scene;
         SceneManager.LoadScene((int)Scene.LoadingScene);
 

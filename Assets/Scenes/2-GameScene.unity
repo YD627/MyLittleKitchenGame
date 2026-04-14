@@ -1189,13 +1189,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 641898140}
+  - component: {fileID: 641898141}
   m_Layer: 5
   m_Name: GamePauseUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &641898140
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1216,6 +1217,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &641898141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641898139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95697078dc3ed241b791b6cc5b59713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiParent: {fileID: 2023181754}
+  resumeButton: {fileID: 1542500222}
+  menuButton: {fileID: 1643525820}
 --- !u!1001 &651823977
 PrefabInstance:
   m_ObjectHideFlags: 0
