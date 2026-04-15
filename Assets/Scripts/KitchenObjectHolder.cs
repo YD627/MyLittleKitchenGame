@@ -76,4 +76,9 @@ public class KitchenObjectHolder : MonoBehaviour
         Destroy(kitchenObject.gameObject);
         ClearKitchenObject ();
     }
+    public static void ClearStaticData()
+    {
+        OnDrop = null;
+        OnPickup = null;
+    }
 }

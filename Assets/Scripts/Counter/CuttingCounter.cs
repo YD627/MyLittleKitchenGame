@@ -55,11 +55,15 @@ public class CuttingCounter : BaseCounter
             }
 
         }
-    }
+    }   
     private void Cut()
     {
         cuttingCount++;
         cuttingCounterVisual.PlayCut();
         OnCut?.Invoke(this, EventArgs.Empty);
+    }
+    public static void ClearStaticData()
+    {
+        OnCut = null;
     }
 }
