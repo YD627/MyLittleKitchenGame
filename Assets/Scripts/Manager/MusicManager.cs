@@ -8,9 +8,11 @@ public class MusicManager : MonoBehaviour
     private AudioSource musicSource;
     private float originalVolume;
     private int volume = 5; // 用户可以设置的声音大小
+    private const string MUSICMANAGER_VOLUME = "MusicManagerVolume";
     private void Awake()
     {
         Instance = this;
+        LoadVolume();
     }
     void Start()
     {
@@ -24,6 +26,7 @@ public class MusicManager : MonoBehaviour
         if (volume > 10) volume = 0;
 
         musicSource.volume = originalVolume * (volume / 10.0f);
+        SaveVolume();
     }
     public int GetVolume()
     {
@@ -41,5 +44,13 @@ public class MusicManager : MonoBehaviour
             musicSource.volume = originalVolume * (volume / 10.0f);
         }
             
+    }
+    private void SaveVolume()
+    {
+        PlayerPrefs.SetInt(MUSICMANAGER_VOLUME, volume);
+    }
+    private void LoadVolume()
+    {
+        volume = PlayerPrefs.GetInt(MUSICMANAGER_VOLUME, volume);
     }
 }

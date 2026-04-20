@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\manager\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|d:\\unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\manager\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|d:\\unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\ui\\settingsui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\settingsui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\ui\\gamepauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\gamepauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\manager\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\manager\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\clearstaticdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\counter\\deliverycounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\ui\\gamepauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\gamepauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\kitchenobjectholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\kitchenobjectholder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{483125E9-F1EA-C12B-7F08-C5B1EB622EAC}|Assembly-CSharp.csproj|D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\assets\\scripts\\manager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,37 +98,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MusicManager.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\Manager\\MusicManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\MusicManager.cs",
               "ToolTip": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\Manager\\MusicManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Manager\\MusicManager.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwCgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T06:22:43.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T06:22:43.954Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SettingsUI.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\UI\\SettingsUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SettingsUI.cs",
               "ToolTip": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\UI\\SettingsUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\SettingsUI.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwB8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAkwG4AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-14T12:40:16.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ClearStaticData.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\ClearStaticData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ClearStaticData.cs",
@@ -136,25 +135,23 @@
               "RelativeToolTip": "Assets\\Scripts\\ClearStaticData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T12:22:01.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-14T12:22:01.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\Manager\\SoundManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\SoundManager.cs",
               "ToolTip": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\Manager\\SoundManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Manager\\SoundManager.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAkwDgAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T12:15:52.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-14T12:15:52.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
@@ -166,27 +163,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "GamePauseUI.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\UI\\GamePauseUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\GamePauseUI.cs",
               "ToolTip": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\UI\\GamePauseUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\GamePauseUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAUwCsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-14T11:31:35.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "GameInput.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\GameInput.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameInput.cs",
               "ToolTip": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\GameInput.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameInput.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwCAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T08:25:31.947Z"
+              "WhenOpened": "2026-04-12T08:25:31.947Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -238,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TrashCounter.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\Counter\\TrashCounter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Counter\\TrashCounter.cs",
@@ -250,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "KitchenObjectHolder.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\KitchenObjectHolder.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\KitchenObjectHolder.cs",
@@ -262,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CuttingCounter.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\Counter\\CuttingCounter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Counter\\CuttingCounter.cs",
@@ -346,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "DeliveryCounter.cs",
               "DocumentMoniker": "D:\\Unity\u5B66\u4E60\\\u6211\u7684\u5C0F\u53A8\u623F\\Assets\\Scripts\\Counter\\DeliveryCounter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Counter\\DeliveryCounter.cs",
