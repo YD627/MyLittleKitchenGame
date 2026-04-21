@@ -21,6 +21,11 @@ public class StoveCounter : BaseCounter
     private float fryingTimer = 0f;
     private FryingRecipe fryingRecipe;
     private StoveState state = StoveState.Idle;
+    private WarningControl warningControl;
+    private void Start()
+    {
+        warningControl = GetComponent<WarningControl>();
+    }
     public override void Interact(Player player)
     {
         if (player.GetKitchenObject())
@@ -37,7 +42,7 @@ public class StoveCounter : BaseCounter
                 else if(burningRecipeList.TryGetFryingRecipe(player.GetKitchenObject().GetKitchenObjectSO(), out FryingRecipe newburningRecipe)){
                     // 当前柜台上没有食材且传递的食材不可以煎
                     TransferKitchenObject(player, this);
-                    StartFrying(newburningRecipe);
+                    StartBurning(newburningRecipe);
                 }
                 else { }
 
@@ -75,6 +80,11 @@ public class StoveCounter : BaseCounter
             case StoveState.Burning:
                 fryingTimer += Time.deltaTime;
                 progressBarUI.UpdateProgress(fryingTimer / fryingRecipe.fryingTime);
+                float warningTimeNormalize = .5f;
+                if (fryingTimer / fryingRecipe.fryingTime > warningTimeNormalize)
+                {
+                    warningControl.ShowWarning();
+                }
                 if (fryingTimer >= fryingRecipe.fryingTime)
                 {
                     DestroyKitchenObject();
@@ -114,5 +124,6 @@ public class StoveCounter : BaseCounter
         stoveCounterVisual.HideStoveEffect();
         progressBarUI.Hide();
         sound.Pause();
+        warningControl.StopWarning();
     }
 }

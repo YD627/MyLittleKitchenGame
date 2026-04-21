@@ -23,11 +23,13 @@ public class GameManager : MonoBehaviour
     private float waitingToStartTimer = 1f;
     private float countDownToStartTimer = 3f;
     private float gamePlayingTimer = 60f;
+    private float gamePlayingTimerTotal;
     private bool isGamePause = false;
 
     private void Awake()
     {
         Instance = this;
+        gamePlayingTimerTotal = gamePlayingTimer;
     }
     // Start is called before the first frame update
     void Start()
@@ -105,6 +107,10 @@ public class GameManager : MonoBehaviour
     {
         player.enabled = true;
     }
+    public bool IsWaitingToStart()
+    {
+        return state == State.WaitingToStart;
+    }
     public bool IsCountDownState()
     {
         return state == State.CountDownToStart;
@@ -134,5 +140,13 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             OnGameUnpasued?.Invoke(this,EventArgs.Empty);
         }
+    }
+    public float GetGamePlayingTimer()
+    {
+        return gamePlayingTimer;
+    }
+    public float GetGamePlayingTimerNormalized()
+    {
+        return gamePlayingTimer/gamePlayingTimerTotal;
     }
 }

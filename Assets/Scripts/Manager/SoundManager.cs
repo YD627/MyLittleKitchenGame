@@ -64,6 +64,14 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(clips, Camera.main.transform.position, volumeMutipler);
     }
+    public void PlayeWarningSound()
+    {
+        PlaySound(audioClipRefsSO.warning);
+    }
+    public void PlayCountDownSound()
+    {
+        PlaySound(audioClipRefsSO.warning);
+    }
     public void PlayStepSound(float volumeMutipler = .1f)
     {
         PlaySound(audioClipRefsSO.footstep, volumeMutipler);
