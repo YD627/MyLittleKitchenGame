@@ -22,3 +22,4 @@ public class BaseCounter : KitchenObjectHolder
         selectedCounter.SetActive(false);
     }
 }
+

@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Rendering.CameraUI;
 
 public class CuttingCounter : BaseCounter
 {
@@ -40,13 +39,13 @@ public class CuttingCounter : BaseCounter
         if (IsHaveKitchenObject())
         {
             // 获取当前食材是否能被切
-            if (cuttingRecipeList.TryGetCuttingRecipe(GetKitchenObject().GetKitchenObjectSO(), out CuttingRecipe cuttingRecipe))
+            if (cuttingRecipeList.TryGetCuttingRecipe(GetKitchenObject().GetKitchenObjectSO(), out CuttingRecipeListSO.CuttingRecipe cuttingRecipe))
             {
                 Cut();
 
-                progressBarUI.UpdateProgress((float)cuttingCount / cuttingRecipe.CuttingCountMax);
+                progressBarUI.UpdateProgress((float)cuttingCount / cuttingRecipe.cuttingProgressMax);
 
-                if (cuttingCount == cuttingRecipe.CuttingCountMax)
+                if (cuttingCount == cuttingRecipe.cuttingProgressMax)
                 {
                     DestroyKitchenObject();
                     CreateKitchenObject(cuttingRecipe.output.prefab);
@@ -62,7 +61,7 @@ public class CuttingCounter : BaseCounter
         cuttingCounterVisual.PlayCut();
         OnCut?.Invoke(this, EventArgs.Empty);
     }
-    public static void ClearStaticData()
+    public static new void ClearStaticData()
     {
         OnCut = null;
     }

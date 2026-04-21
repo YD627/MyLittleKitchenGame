@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClearStaticData : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         TrashCounter.ClearStaticData();
         KitchenObjectHolder.ClearStaticData();
