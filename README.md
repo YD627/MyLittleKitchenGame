@@ -63,6 +63,7 @@
 *(此处可添加游戏开始界面、厨房场景、烹饪过程、设置菜单的截图)*
 
 ## 📁 项目结构
+```
 MyLittleKitchenGame/
 
 ├── Assets/           # 游戏资源文件夹（模型、脚本、材质、场景等）
@@ -80,6 +81,7 @@ MyLittleKitchenGame/
 ├── .gitignore        # Git忽略文件配置
 
 └── 我的小厨房.sln     # Visual Studio解决方案文件
+```
 
 ## 🔨 技术栈
 
